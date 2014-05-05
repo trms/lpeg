@@ -17,6 +17,10 @@
 #include "lpprint.h"
 #include "lptree.h"
 
+//AAS: 2014/05/05, for windows dll.
+#ifdef _WIN32
+__declspec(dllexport) int luaopen_lpeg (lua_State *L);
+#endif
 
 /* number of siblings for each tree */
 const byte numsiblings[] = {

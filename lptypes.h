@@ -29,7 +29,8 @@
 /*
 ** compatibility with Lua 5.2
 */
-#if (LUA_VERSION_NUM == 502)
+//AAS 2014/05/05 :: added 503 check, for Lua 5.3work1/2
+#if ((LUA_VERSION_NUM == 502) || (LUA_VERSION_NUM == 503))
 
 #undef lua_equal
 #define lua_equal(L,idx1,idx2)  lua_compare(L,(idx1),(idx2),LUA_OPEQ)
