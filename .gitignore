@@ -1,9 +1,14 @@
+*.nupkg
+
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
 ipch/**
+
+# Nuget packages folder
+/packages/**
 
 # Compiled source #
 ###################
