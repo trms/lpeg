@@ -1,0 +1,37 @@
+nuget {
+	nuspec {
+		id = lpeg;
+		title: LPeg;
+		version: 0.12.0000.1;
+		authors: {Roberto Ierusalimschy, coapp, Tightrope Media Systems};
+		owners: {Puc-Rio};
+		licenseUrl: "http://www.lua.org/license.html";
+		projectUrl: "http://www.inf.puc-rio.br/~roberto/lpeg/";
+		iconUrl: "http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-128.gif";
+		releaseNotes: {@"
+  + no "unsigned short" limit for pattern sizes
+  + mathtime captures considered nullable
+  + some bugs fixed
+"}; 
+		requireLicenseAcceptance:false;
+		summary: "LPEG Parsing Expression Grammars For Lua";
+		copyright: "Copyright 2013 Lua.org, PUC-Rio.";
+		tags: {native, Lua, grammar, parsing};
+		description: {
+@"LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs). This text is a reference manual for the library. For a more formal treatment of LPeg, as well as some discussion about its implementation, see A Text Pattern-Matching Tool based on Parsing Expression Grammars. (You may also be interested in my talk about LPeg given at the III Lua Workshop.)";}
+	};
+
+	files {
+		docs : {
+			#destination = ${d_docs}\lpeg;
+			.\*.html
+		};
+		[x64, v100]
+        	bin: {
+        		x64\Release\*.dll
+        	};
+        	pdb: x64\Release\*.pdb;
+        [win32, v100]
+        	bin: {Win32\Release\*.dll};
+    }
+}
