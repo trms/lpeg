@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lpeg;
 		title: LPeg;
-		version: 0.12.0000.1;
+		version: 0.12.0000.4;
 		authors: {Roberto Ierusalimschy, coapp, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -20,18 +20,27 @@ nuget {
 		description: {
 @"LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs). This text is a reference manual for the library. For a more formal treatment of LPeg, as well as some discussion about its implementation, see A Text Pattern-Matching Tool based on Parsing Expression Grammars. (You may also be interested in my talk about LPeg given at the III Lua Workshop.)";}
 	};
-
+dependencies {
+        // This node defines any outside items which may be needed to consume this package.
+        packages : {
+            // This is a list of other NuGet packages required to use this package.
+            // Each item follows the format "<pkg_name>/<version>"
+            lua/"[5.1, 5.4)",
+        };
+    };
 	files {
 		docs : {
-			#destination = ${d_docs}\lpeg;
-			.\*.html
+			#destination = {"${d_docs}\lpeg"};
+			{".\*.html"};
 		};
-		[x64, v100]
-        	bin: {
-        		x64\Release\*.dll
-        	};
-        	pdb: x64\Release\*.pdb;
-        [win32, v100]
-        	bin: {Win32\Release\*.dll};
+		[x64, v100]{
+        	bin: {"x64\Release\*.dll"};
+        	//pdb: {x64\Release\*.pdb};
+        };
+
+        [win32, v100] {
+        	bin: {"Win32\Release\*.dll"};
+        	//pdb: {"Win32\Release\*.pdb"};
+        };
     }
 }
