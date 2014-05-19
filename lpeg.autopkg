@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lpeg;
 		title: LPeg;
-		version: 0.12.0000.4;
+		version: 0.12.0000.5;
 		authors: {Roberto Ierusalimschy, coapp, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
