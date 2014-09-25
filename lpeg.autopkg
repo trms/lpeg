@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lpeg;
 		title: LPeg;
-		version: 0.12.0000.8;
+		version: 0.12.0000.9;
 		authors: {Roberto Ierusalimschy, coapp, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -25,7 +25,7 @@ dependencies {
         packages : {
             // This is a list of other NuGet packages required to use this package.
             // Each item follows the format "<pkg_name>/<version>"
-            lua/"[5.3.0003.02, 5.4)",
+            lua/"[5.3, 5.4)",
         };
     };
 	files {
@@ -34,7 +34,7 @@ dependencies {
 			{".\*.html"};
 		};
 		
-		mypdb: { 
+		mypdb: {
             // copies the whole folder tree.
             #add-all-files : Items.lpegPdb;
             // set the destination in the package itself. 
