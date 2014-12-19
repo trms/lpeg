@@ -54,5 +54,8 @@
   <ItemGroup>
     <None Include="lpeg.autopkg" />
     <None Include="packages.config" />
+    <None Include="lpeg.def">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
