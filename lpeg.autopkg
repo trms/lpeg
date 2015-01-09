@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lpeg;
 		title: LPeg;
-		version: 0.12.1000.6;
+		version: 0.12.1000.7;
 		authors: {Roberto Ierusalimschy, coapp, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -41,22 +41,22 @@ dependencies {
 			#destination : ${build_root}\${conditionFolder}\pdbs;
         };
 		
-		[x64, v100, Release] {
+		[x64, Release] {
         	bin:   x64\Release\lpeg.dll;
         	mypdb: x64\Release\lpeg.pdb;
         };
 		
-		[x64, v100, Debug] {
+		[x64, Debug] {
         	bin:   x64\Debug\lpeg.dll;
         	mypdb: x64\Debug\lpeg.pdb;
         };
 
-        [win32, v100, Release] {
+        [win32, Release] {
         	bin:   Win32\Release\lpeg.dll;
         	mypdb: Win32\Release\lpeg.pdb;
         };
 		
-		[win32, v100, Debug] {
+		[win32, Debug] {
         	bin:   Win32\Debug\lpeg.dll;
         	mypdb: Win32\Debug\lpeg.pdb;
         };
